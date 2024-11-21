@@ -198,3 +198,65 @@ Kali Linux
             iptables -F
             iptables -X
             iptables -t raw -F iptables -t raw -X
+
+
+
+        Information Gathering & Vulnerability Scanning
+===================================================================================================================================
+
+-   Passive Information Gathering
+    ---------------------------------------------------------------------------------------------------------------------------
+
+-   Google Hacking
+
+    -   Google search to find website sub domains  
+        `site:microsoft.com`
+
+    -   Google filetype, and intitle  
+        `intitle:"netbotz appliance" "OK" -filetype:pdf`
+
+    -   Google inurl  
+        `inurl:"level/15/sexec/-/show"`
+
+    -   Google Hacking Database:  
+        https://www.exploit-db.com/google-hacking-database/
+
+-   SSL Certificate Testing  
+    [https://www.ssllabs.com/ssltest/analyze.html](https://www.ssllabs.com/ssltest/analyze.html)
+
+-   Email Harvesting
+
+    -   Simply Email  
+        `git clone https://github.com/killswitch-GUI/SimplyEmail.git  `
+        
+        `./SimplyEmail.py -all -e TARGET-DOMAIN`
+
+-   Netcraft
+
+    -   Determine the operating system and tools used to build a site  
+        https://searchdns.netcraft.com/
+
+-   Whois Enumeration  
+    `whois domain-name-here.com  `
+    
+    `whois $ip`
+
+-   Banner Grabbing
+
+    -   `nc -v $ip 25`
+
+    -   `telnet $ip 25`
+
+    -   `nc TARGET-IP 80`
+
+-   Recon-ng - full-featured web reconnaissance framework written in Python
+
+    -   `cd /opt; git clone https://LaNMaSteR53@bitbucket.org/LaNMaSteR53/recon-ng.git  `
+    
+        `cd /opt/recon-ng  `
+        
+        `./recon-ng  `
+        
+        `show modules  `
+        
+        `help`
